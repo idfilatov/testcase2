@@ -10,3 +10,7 @@ def users(request):
 		'users': users
 	}
 	return HttpResponse(template.render(context, request))
+
+def add_user(request):
+	template = loader.get_template('add_user.html')
+	return HttpResponse(template.render())
